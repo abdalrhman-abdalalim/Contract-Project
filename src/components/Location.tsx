@@ -37,11 +37,7 @@ const Location = () => {
       )
       .then(
         () => {
-          console.log("SUCCESS!");
           setFormValues({ user_name: "", user_email: "", message: "" }); // Reset form
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
         }
       );
   };
