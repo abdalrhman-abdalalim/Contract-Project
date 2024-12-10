@@ -1,0 +1,13 @@
+@media screen and (max-width:768px){
+    .active{
+        background-color: #C0A001;
+        color:white;
+        font-weight: bold;
+    }
+}
+@media screen and (min-width:768px){
+    .active{
+        background-color: #C0A001;
+        font-weight: bold;
+    }
+}
