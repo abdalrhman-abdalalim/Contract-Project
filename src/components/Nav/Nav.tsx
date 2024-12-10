@@ -193,7 +193,7 @@ const Nav = () => {
 
         {/* Social Media Icons */}
         <motion.div
-          className="flex justify-around w-32 max-md:my-3"
+          className="flex justify-around w-32 max-md:my-3 mr-3"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.8 }}
