@@ -1,6 +1,6 @@
 import { FormEvent, useRef, useState } from "react";
-import   emailjs from "emailjs-com"; // Import emailjs
-import { motion } from "framer-motion"; // Import Framer Motion for animations
+import emailjs from "emailjs-com"; // Import emailjs
+import  { motion } from "framer-motion"; // Import Framer Motion for animations
 
 const Location = () => {
   const form = useRef<HTMLFormElement | null>(null);
