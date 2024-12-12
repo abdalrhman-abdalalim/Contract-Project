@@ -51,10 +51,10 @@ const Nav = () => {
           className="w-44 max-xl1:w-32 max-md:w-28 max-sm:w-[90px] max-xs1:absolute max-xs1:right-0"
           alt="logo"
         />
-        <div className="flex mr-24 max-xl1:mr-8 max-xs1:absolute max-xs1:left-0 max-xs1:h-[84px] max-xs1:hidden">
+        <div className="flex mr-24 max-xl1:mr-8 max-xs1:absolute max-xs1:left-0 max-xs1:h-[84px] max-xs1:mt-16 max-xs1:justify-center">
           {/* Location Section */}
           <motion.div
-            className="flex w-44 items-center max-xl1:w-[130px] max-md:w-[100px] max-sm:w-[80px] max-xs1:h-7"
+            className="flex w-44 items-center max-xl1:w-[130px] max-md:w-[100px] max-sm:w-[80px] max-xs1:h-7 "
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2, delay: 0.3 }}
@@ -64,7 +64,7 @@ const Nav = () => {
               <p className="text-xl text-[#0753AD] font-bold max-xl1:text-[17px] max-md:text-[12px] max-sm:text-[9px]">
                 السعودية
               </p>
-              <p className="text-xs text-gray-400 max-md:text-[8px] max-md:mt-[-5px] max-sm:text-[6px] max-sm:mt-[-8px]">
+              <p className="text-xs text-gray-400 max-md:text-[8px] max-md:mt-[-5px] max-sm:text-[6px] max-sm:mt-[-8px] ">
                 حي الريان بريدة القصيم
               </p>
             </div>
@@ -91,7 +91,7 @@ const Nav = () => {
           </motion.div>
           {/* Work Time Section */}
           <motion.div
-            className="flex w-64 items-center max-xl1:w-56 max-xl1:mr-3 max-md:w-[150px] max-xs1:mr-[-2px] max-xs1:h-7 "
+            className="flex w-64 items-center max-xl1:w-56 max-xl1:mr-3 max-md:w-[90px] max-xs1:mr-[-2px] max-xs1:h-7 max-xs2:hidden "
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2, delay: 0.7 }}
