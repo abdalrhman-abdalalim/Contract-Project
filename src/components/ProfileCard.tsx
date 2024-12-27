@@ -1,83 +1,88 @@
+import { useEffect, useRef } from "react";
 import { PhotoService } from "../data/indext";
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import "../App.css";
 
-export default function ProfileCard() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+export default function Slider() {
+  const sliderRef = useRef<HTMLUListElement | null>(null); // Reference to the slider element
+  let isDown = false;
+  let startX: number = 0;
+  let scrollLeft: number = 0;
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % PhotoService.length);
+  const end = () => {
+    isDown = false;
+    sliderRef.current?.classList.remove("active");
   };
 
-  const handlePrev = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + PhotoService.length) % PhotoService.length
+  const start = (e: MouseEvent | TouchEvent) => {
+    if (!sliderRef.current) return;
+    isDown = true;
+    sliderRef.current.classList.add("active");
+    const pageX = (e as MouseEvent).pageX || (e as TouchEvent).touches[0].pageX;
+    startX = pageX - sliderRef.current.offsetLeft;
+    scrollLeft = sliderRef.current.scrollLeft;
+  };
+
+  const move = (e: MouseEvent | TouchEvent) => {
+    if (!isDown || !sliderRef.current) return;
+
+    e.preventDefault();
+    const pageX = (e as MouseEvent).pageX || (e as TouchEvent).touches[0].pageX;
+    const x = pageX - sliderRef.current.offsetLeft;
+    const dist = x - startX;
+    sliderRef.current.scrollLeft = scrollLeft - dist;
+  };
+
+  useEffect(() => {
+    const slider = sliderRef.current;
+
+    if (!slider) return;
+
+    // Event Listeners
+    slider.addEventListener("mousedown", start);
+    slider.addEventListener("touchstart", start);
+
+    slider.addEventListener("mousemove", move);
+    slider.addEventListener("touchmove", move);
+
+    slider.addEventListener("mouseleave", end);
+    slider.addEventListener("mouseup", end);
+    slider.addEventListener("touchend", end);
+
+    return () => {
+      // Cleanup listeners on unmount
+      slider.removeEventListener("mousedown", start);
+      slider.removeEventListener("touchstart", start);
+
+      slider.removeEventListener("mousemove", move);
+      slider.removeEventListener("touchmove", move);
+
+      slider.removeEventListener("mouseleave", end);
+      slider.removeEventListener("mouseup", end);
+      slider.removeEventListener("touchend", end);
+    };
+  }, []);
+
+  const Slide = ({ img }: { img: string }) => {
+    return (
+      <li className="item">
+        <div className="image" onDragStart={(e) => e.preventDefault()}>
+          <img
+            src={img}
+            alt="Slide Image"
+            className="slider-img w-full h-[460px] max-md:h-[360px] rounded-lg max-xs1:h-[270px] max-sm:h-[360px] "
+          />
+        </div>
+      </li>
     );
   };
 
-  const getVisibleItems = () => {
-    const start =
-      currentIndex - 1 < 0 ? PhotoService.length - 1 : currentIndex - 1;
-    const end = (currentIndex + 1) % PhotoService.length;
-
-    if (start < end) {
-      return PhotoService.slice(start, end + 1);
-    } else {
-      return [...PhotoService.slice(start), ...PhotoService.slice(0, end + 1)];
-    }
-  };
-
-  const visibleItems = getVisibleItems();
-
   return (
-    <div id="gallery" className=" w-full flex flex-col items-center relative">
-      <div className="relative h-[400px] md:h-[450px] flex overflow-hidden rounded-lg">
-        <AnimatePresence initial={false}>
-          {visibleItems.map((photo, index) => (
-            <motion.div
-              key={photo.itemImageSrc}
-              className={`flex-none w-full h-[400px] sm:w-1/3 flex justify-center  items-center px-2 ${
-                index === 1 ? "z-10" : ""
-              }`}
-              initial={{ opacity: 0, scale: 0.8, x: index === 0 ? -50 : 50 }}
-              animate={{
-                opacity: 1,
-                scale: index === 1 ? 1.1 : 0.9,
-                x: 0,
-              }}
-              exit={{ opacity: 0, scale: 0.8, x: index === 0 ? -50 : 50 }}
-              transition={{ duration: 0.5 }}
-            >
-              <img
-                src={photo.itemImageSrc}
-                className="block w-full h-auto rounded-lg"
-                alt={photo.alt}
-              />
-            </motion.div>
-          ))}
-        </AnimatePresence>
-      </div>
-      <div className="mt-4 flex w-40 justify-between">
-        <motion.button
-          type="button"
-          className=" bg-[#FFC048] p-2 rounded-md shadow-md shadow-gray-500"
-          onClick={handlePrev}
-          whileTap={{ scale: 0.9 }}
-          whileHover={{ backgroundColor: "#FFD369" }}
-        >
-          <ArrowRight className="w-5 h-5 text-white" />
-        </motion.button>
-        <motion.button
-          type="button"
-          className="bg-[#FFC048] p-2 rounded-md shadow-md shadow-gray-500"
-          onClick={handleNext}
-          whileTap={{ scale: 0.9 }}
-          whileHover={{ backgroundColor: "#FFD369" }}
-        >
-          <ArrowLeft className="w-5 h-5 text-white" />
-        </motion.button>
-      </div>
+    <div className="wrapper">
+      <ul className="items" ref={sliderRef}>
+        {PhotoService.map((item, index) => {
+          return <Slide key={index} img={item.itemImageSrc as string} />;
+        })}
+      </ul>
     </div>
   );
 }

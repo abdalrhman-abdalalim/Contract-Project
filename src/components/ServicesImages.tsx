@@ -17,12 +17,12 @@ const ServicesImages = () => {
           <img
             src={serviceImg1}
             alt="experienced team"
-            className="w-14 mx-auto max-sm:w-10 max-xs2:w-8"
+            className="mx-auto w-14 max-sm:w-10 max-xs2:w-8"
           />
           <h1 className="text-center text-[16px] font-bold mt-2 max-md:text-[12px] max-sm:text-[10px] max-xs2:text-[8px]">
             عزل خزانات المياه
           </h1>
-          <p className="text-[11px] text-center text-gray-600 mt-2 max-md:text-[9px] max-sm:text-[8px] max-xs2:text-[7px]">
+          <p className="text-[13px] text-center text-gray-600 mt-2 max-md:text-[11px] max-sm:text-[9px] max-xs2:text-[7px]">
             نقدم خدمات متخصصة في عزل خزانات المياه لضمان حماية كاملة من التسربات
             والحفاظ على جودة المياه. نستخدم أحدث التقنيات والمواد المبتكرة
             لتحقيق أعلى معايير الأمان والمتانة، مما يضمن عمرًا أطول للخزانات
@@ -40,12 +40,12 @@ const ServicesImages = () => {
           <img
             src={serviceImg2}
             alt="experienced team"
-            className="w-14 mx-auto max-sm:w-10 max-xs2:w-8"
+            className="mx-auto w-14 max-sm:w-10 max-xs2:w-8"
           />
           <h1 className="text-center text-[16px] font-bold mt-2 max-md:text-[12px] max-sm:text-[10px] max-xs2:text-[8px]">
             ترميمات
           </h1>
-          <p className="text-[11px] text-center text-gray-600 mt-2 max-md:text-[9px] max-sm:text-[8px] max-xs2:text-[7px]">
+          <p className="text-[13px] text-center text-gray-600 mt-2 max-md:text-[11px] max-sm:text-[9px] max-xs2:text-[7px]">
             نحن متخصصون في أعمال الترميم لإعادة المباني والمنشآت إلى حالتها
             المثالية. نعمل بدقة واحترافية لضمان جودة عالية، مع مراعاة التفاصيل
             لتحقيق نتائج ترضي تطلعات عملائنا وتعكس رؤيتهم.
@@ -62,12 +62,12 @@ const ServicesImages = () => {
           <img
             src={serviceImg3}
             alt="experienced team"
-            className="w-14 mx-auto max-sm:w-10 max-xs2:w-8"
+            className="mx-auto w-14 max-sm:w-10 max-xs2:w-8"
           />
           <h1 className="text-center text-[16px] font-bold mt-2 max-md:text-[12px] max-sm:text-[10px] max-xs2:text-[8px]">
             تشطيبات
           </h1>
-          <p className="text-[11px] text-center text-gray-600 mt-2 max-md:text-[9px] max-sm:text-[8px] max-xs2:text-[7px]">
+          <p className="text-[13px] text-center text-gray-600 mt-2 max-md:text-[11px] max-sm:text-[9px] max-xs2:text-[7px]">
             نقدم خدمات التشطيبات الداخلية والخارجية بأعلى معايير الجودة والدقة،
             لتلبية كافة احتياجات عملائنا. نحرص على تنفيذ تصميمات عصرية وأنيقة
             تضيف لمسة جمالية فريدة لمشاريعكم.

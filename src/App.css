@@ -3,5 +3,123 @@
 @tailwind utilities;
 
 body {
-    background-color: "#FAE321";
+  background-color: "#FAE321";
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.wrapper {
+  position: relative;
+
+  &:before,
+  &:after {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    content: "";
+    width: 7%;
+    display: block;
+    width: margin;
+    height: 100%;
+  }
+
+  &:before {
+    left: 0;
+    background: linear-gradient(90deg, #222, transparent);
+  }
+
+  &:after {
+    right: 0;
+    background: linear-gradient(-90deg, #222, transparent);
+  }
+}
+
+.items {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 0;
+  cursor: pointer;
+
+  &.active {
+    cursor: grab;
+    background-color: transparent;
+  }
+}
+
+.item {
+  display: inline-block;
+  margin-left: 10px;
+  user-select: none;
+  width: 100%;
+  height: 300px;
+  color: #222;
+  font-size: 33px;
+  font-weight: bold;
+  line-height: 130px;
+}
+
+@media screen and (min-width: 270px) {
+  .item {
+    width: 80%;
+    height: 270px;
+  }
+}
+
+@media screen and (min-width: 350px) {
+  .item {
+    width: 60%;
+    height: 270px;
+  }
+}
+
+
+@media screen and (min-width: 447px) {
+  .item {
+    width: 55%;
+    height: 360px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .item {
+    width: 40%;
+    height: 360px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .item {
+    width: 40%;
+    height: 460px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .item {
+    width: 40%;
+    height: 460px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .item {
+    width: 30%;
+    height: 460px;
+  }
+}
+
+.image img {
+  outline: none; /* Remove the default focus outline */
+}
+
+.image img:focus {
+  background-color: transparent; /* Ensure no background is applied */
 }

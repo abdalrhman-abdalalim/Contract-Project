@@ -1,5 +1,5 @@
 import { BriefcaseBusiness, MapPinned, Phone } from "lucide-react";
-import { FaInstagram, FaFacebookF, FaWhatsapp } from "react-icons/fa";
+import {  FaWhatsapp } from "react-icons/fa";
 import { motion } from "framer-motion"; // Importing Framer Motion for animations
 
 const Footer = () => {
@@ -9,7 +9,7 @@ const Footer = () => {
 
       {/* Adding animation to the paragraph */}
       <motion.p
-        className="mt-10 w-72 text-xs text-white italic mx-auto"
+        className="mt-10 max-w-[600px] text-md text-white italic mx-auto text-center max-sm:text-[13px]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
@@ -21,51 +21,58 @@ const Footer = () => {
 
       {/* Adding animation to the contact info section */}
       <motion.div
-        className="flex justify-between mt-5 text-white w-72 mx-auto"
+        className="grid grid-cols-3 max-xs0:grid-cols-1 mt-5 max-xs2:mt-1 text-white max-w-[500px] mx-auto"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-        <div className="flex items-center">
-          <MapPinned className="w-4 h-11 max-md:w-7 max-md:h-7 max-sm:h-5" />
-          <h4 className="text-xs mr-1 text-[#C0A001] font-bold">
-            {" "}
+        <div className="flex items-center mx-auto max-xs0:my-1">
+          <MapPinned className="w-6 h-11 max-md:w-6 max-md:h-7 max-sm:h-6" />
+          <h4 className="text-md mr-1 text-[#C0A001] font-bold text-center ">
             بريدة القصيم
           </h4>
         </div>
-        <div className="flex items-center">
-          <Phone className="w-4 h-10 max-xl1:h-8 max-xl1:w-9 max-md:w-7 max-md:h-7 max-sm:h-5" />
-          <h4 className="text-xs mr-1 text-[#C0A001] font-bold">
+        <div className="flex  items-center mx-auto max-xs0:my-2">
+          <Phone className="w-6 h-9 max-xl1:h-9 max-xl1:w-6 max-md:w-6 max-md:h-7 max-sm:h-7" />
+          <h4 className="text-md mr-1 text-[#C0A001] font-bold text-center ">
             966572314298+
           </h4>
         </div>
-        <div className="flex items-center">
-          <BriefcaseBusiness className="w-4 h-10 max-xl1:h-8 max-xl1:w-9 max-md:w-8 max-md:h-8 max-sm:h-6" />
-          <h4 className="text-xs mr-1 text-[#C0A001] font-bold">يومياً</h4>
+        <div className="flex  items-center mx-auto max-xs0:my-2">
+          <BriefcaseBusiness className="w-6 h-10 max-xl1:h-8 max-xl1:w-6 max-md:w-6 max-md:h-8 max-sm:h-6" />
+          <h4 className="text-md mr-1 text-[#C0A001] font-bold text-center ">
+            يومياً
+          </h4>
         </div>
       </motion.div>
 
       {/* Adding animation to social media links */}
       <motion.div
-        className="flex justify-around mx-auto mt-7 w-32 max-md:my-3"
+        className="flex justify-around items-center mx-auto mt-9 w-32 max-md:mt-10 max-xs0:mt-1"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
       >
         <a href="https://www.instagram.com/tash.tib/" target="blank">
-          <FaInstagram className="fill-white hover:fill-[#C0A001]" />
+          <img
+            src="assets\instagram.png"
+            alt="insta-icon"
+            className="h-[26px]"
+          />
         </a>
-        <a href="https://www.facebook.com/" target="blank">
-          <FaFacebookF className="fill-white hover:fill-[#C0A001]" />
-        </a>
-        <a href="https://wa.me/+966572314298" target="blank">
-          <FaWhatsapp className="fill-white hover:fill-[#C0A001]" />
+
+        <a
+          href="https://wa.me/+966572314298"
+          target="blank"
+          className="hover:cursor-pointer"
+        >
+          <FaWhatsapp className="fill-[#25D366] h-5 " />
         </a>
       </motion.div>
 
       {/* Adding animation to the footer text */}
       <motion.h4
-        className="text-white text-center text-xs mt-10"
+        className="text-white text-center w-full ml-3 text-xs mt-10 absolute bottom-0 right-[50%] translate-x-[50%]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1, ease: "easeOut" }}

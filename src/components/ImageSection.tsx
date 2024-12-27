@@ -16,9 +16,9 @@ const ImageSection = () => {
         backgroundImage: `url(${backGroundUrl})`,
         zIndex: -1,
       }}
-      className="w-full h-screen bg-cover bg-top overflow-x-hidden"
+      className="w-full h-screen overflow-x-hidden bg-top bg-cover"
     >
-      <div className="h-screen flex items-center justify-center bg-black w-full opacity-80">
+      <div className="flex items-center justify-center w-full h-screen bg-black opacity-80">
         <motion.div
           className="text-center"
           initial={{ opacity: 0, y: 50 }}
@@ -29,7 +29,7 @@ const ImageSection = () => {
             # تشطيبات
           </h1>
           <motion.h1
-            className="text-center text-white font-bold text-6xl max-md:text-5xl max-sm:text-4xl"
+            className="text-6xl font-bold text-center text-white max-md:text-5xl max-sm:text-4xl"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5, delay: 0.2, ease: "easeOut" }}
@@ -37,7 +37,7 @@ const ImageSection = () => {
             لخدمات المباني
           </motion.h1>
           <motion.p
-            className="text-md text-center text-white mt-7 text-wrap mx-auto w-[700px] max-md:w-[500px] max-md:text-sm max-md:mt-5 max-sm:w-[300px] max-sm:mt-2"
+            className="text-lg mb-4 text-center text-white mt-7 max-sm:text-sm text-wrap mx-auto w-[700px] max-sm:mt-3 max-md:w-[500px] max-md:mt-5 max-sm:w-[300px]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5, delay: 0.4, ease: "easeOut" }}
@@ -47,13 +47,13 @@ const ImageSection = () => {
             الالتزام بالمواعيد والدقة في التنفيذ لتحقيق رضا عملائنا الكرام.
           </motion.p>
           <motion.div
-            className="flex items-center justify-around w-72 mt-2 mx-auto"
+            className="flex items-center justify-around mx-auto mt-2 w-72"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5, delay: 0.6, ease: "easeOut" }}
           >
             <motion.button
-              className="bg-transparent p-3 rounded-3xl border flex items-center text-white hover:scale-110 transition-all duration-300 ease-in-out max-sm:p-2 max-sm:text-sm"
+              className="flex items-center p-3 text-white transition-all duration-300 ease-in-out bg-transparent border rounded-3xl hover:scale-110 max-sm:p-2 max-sm:text-sm"
               onClick={onClickContact}
               whileHover={{ scale: 1.1 }}
             >

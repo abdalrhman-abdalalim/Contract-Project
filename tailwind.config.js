@@ -4,10 +4,11 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        "xl1": "1086px",
-        "xs1":"504px",
-        "xs2":"360px"
-      }
+        xl1: "1086px",
+        xs0:"500px",
+        xs1: "447px",
+        xs2: "335px",
+      },
     },
   },
   plugins: [],

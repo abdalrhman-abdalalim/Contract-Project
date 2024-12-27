@@ -2,13 +2,15 @@ import { motion } from "framer-motion";
 import square from "../../assets/square.png";
 import ProfileCard from "./ProfileCard";
 
-const TeamSection = () => {
+
+const Slider = () => {
+
   return (
-    <section className="mt-10 h-[500px]">
-      <div className="text-center mb-5">
+    <section className="mt-10 h-[500px] mb-40">
+      <div className="mb-5 text-center">
         {/* Section Title with Animation */}
         <motion.h1
-          className="text-xl font-bold lg:text-3xl"
+          className="mb-2 text-xl font-bold lg:text-3xl"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -42,7 +44,7 @@ const TeamSection = () => {
         </div>
       </div>
 
-      {/* Profile Card with Animation */}
+      {/* Slider Section */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -52,6 +54,10 @@ const TeamSection = () => {
       </motion.div>
     </section>
   );
+};
+
+const TeamSection = () => {
+  return <Slider />;
 };
 
 export default TeamSection;

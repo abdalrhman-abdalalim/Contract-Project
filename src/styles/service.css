@@ -1,0 +1,55 @@
+
+
+.ag-offer-block {
+  padding: 50px 0;
+}
+
+.ag-offer_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ag-offer_item {
+  position: relative;
+  overflow: hidden;
+}
+
+.ag-offer_visible-item {
+  display: block;
+  align-items: center;
+  padding: 20px;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+
+.ag-offer_hidden-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #C0A001;
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.ag-offer_text {
+  color: black;
+  font-size: 16px;
+  text-align: center;
+}
+
+.ag-offer_item:hover .ag-offer_visible-item {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.ag-offer_item:hover .ag-offer_hidden-item {
+  opacity: 1;
+  transform: scale(1);
+}

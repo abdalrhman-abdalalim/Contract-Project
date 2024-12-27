@@ -4,7 +4,7 @@ import experienceImg2 from "../../assets/finishing_works_in_house_for_company_we
 
 const ExperienceSection = () => {
   return (
-    <section className="container max-w-[950px] p-5 h-fit mx-auto lg:max-w-[1200px] lg:p-10 mt-10">
+    <section className="container max-w-[950px] p-5 h-fit mx-auto lg:max-w-[1200px] lg:p-10 -mt-24 max-md:-mt-48 max-sm:-mt-[250px]">
       <div className="grid grid-cols-2 grid-rows-1 max-md:grid-cols-1 max-md:grid-rows-2">
         {/* Images Div */}
         <div className="relative flex flex-col items-center mr-7 max-md:order-0 lg:mr-10">
@@ -60,8 +60,8 @@ const ExperienceSection = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
-                <h1 className="font-bold text-[14px] lg:text-[20px]">200 +</h1>
-                <h6 className="text-[9px] text-gray-600 max-md:text-[8px] lg:text-[12px]">
+                <h1 className="font-bold text-[18px] lg:text-[20px]">200 +</h1>
+                <h6 className="text-[12px] text-gray-600 max-md:text-[12px] lg:text-[14px]">
                   مشاريع ناجحة في مجال عزل الخزانات باستخدام أحدث التقنيات
                 </h6>
               </motion.div>
@@ -70,8 +70,8 @@ const ExperienceSection = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
               >
-                <h1 className="font-bold text-[14px] lg:text-[20px]">15 +</h1>
-                <h6 className="text-[9px] text-gray-600 max-md:text-[8px] lg:text-[12px]">
+                <h1 className="font-bold text-[18px] lg:text-[20px]">15 +</h1>
+                <h6 className="text-[12px] text-gray-600 max-md:text-[12px] lg:text-[14px]">
                   سنوات من الخبرة في مجال الترميم والتشطيبات بمختلف أنواعها
                 </h6>
               </motion.div>
@@ -82,8 +82,8 @@ const ExperienceSection = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
-                <h1 className="font-bold text-[14px] lg:text-[20px]">20 +</h1>
-                <h6 className="text-[9px] text-gray-600 max-md:text-[8px] lg:text-[12px]">
+                <h1 className="font-bold text-[18px] lg:text-[20px]">20 +</h1>
+                <h6 className="text-[12px] text-gray-600 max-md:text-[12px] lg:text-[14px]">
                   فريق عمل متخصص ومؤهل لضمان جودة العمل ودقة التنفيذ{" "}
                 </h6>
               </motion.div>
@@ -92,8 +92,8 @@ const ExperienceSection = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.7 }}
               >
-                <h1 className="font-bold text-[14px] lg:text-[20px]">20,000</h1>
-                <h6 className="text-[9px] text-gray-600 max-md:text-[8px] lg:text-[12px]">
+                <h1 className="font-bold text-[18px] lg:text-[20px]">20,000</h1>
+                <h6 className="text-[12px] text-gray-600 max-md:text-[12px] lg:text-[14px]">
                   ساعات عمل مخصصة لإنهاء المشاريع بأعلى مستوى من الإتقان
                   والاحترافية
                 </h6>

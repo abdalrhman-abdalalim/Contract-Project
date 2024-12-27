@@ -6,6 +6,7 @@ import qualityServices4 from "../../assets/insulation.png";
 import qualityServices5 from "../../assets/property.png";
 import qualityServices6 from "../../assets/restore.png";
 import square from "../../assets/square.png";
+import "../styles/service.css";
 
 const OurServicesSection = () => {
   const services = [
@@ -42,7 +43,7 @@ const OurServicesSection = () => {
   ];
 
   return (
-    <section className="mt-6">
+    <section className="-mt-14">
       <div className="text-center">
         <motion.h1
           className="text-xl font-bold lg:text-3xl"
@@ -75,36 +76,42 @@ const OurServicesSection = () => {
           />
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-4 max-md:grid-cols-3 max-sm:grid-cols-1 lg:gap-8">
+      <div className="grid grid-cols-3 gap-4 max-md:grid-cols-3 max-sm:grid-cols-1 lg:gap-8 mt-5">
         {services.map((service, index) => (
           <motion.div
             key={index}
-            className="bg-white h-fit p-5 lg:p-8 shadow-md rounded-lg"
+            className="ag-offer_item p-5 rounded-lg shadow-md h-fit lg:p-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
           >
-            <img
-              src={service.src}
-              alt={service.title}
-              className="w-10 mx-auto lg:w-16"
-            />
-            <motion.h1
-              className="text-center text-[12px] font-bold mt-1 lg:text-[18px] lg:mt-4"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
-              {service.title}
-            </motion.h1>
-            <motion.p
-              className="text-[10px] font-bold text-center mt-3 lg:text-[14px] lg:mt-6"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-            >
-              {service.description}
-            </motion.p>
+            <div className="ag-offer_visible-item">
+              <div className="ag-offer_img-box">
+                <motion.img
+                  src={service.src}
+                  alt={service.title}
+                  className="w-10 mx-auto lg:w-16 ag-offer_img"
+                />
+              </div>
+              <motion.h1
+                className="ag-offer_title text-center text-[15px] font-bold mt-1 lg:text-[18px] lg:mt-4"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+              >
+                {service.title}
+              </motion.h1>
+            </div>
+            <div className="ag-offer_hidden-item">
+              <motion.p
+                className=" ag-offer_text text-[10px] font-bold text-center mt-3 lg:text-[14px] lg:mt-6"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+              >
+                {service.description}
+              </motion.p>
+            </div>
           </motion.div>
         ))}
       </div>
@@ -113,3 +120,31 @@ const OurServicesSection = () => {
 };
 
 export default OurServicesSection;
+
+{
+  /* <motion.div
+  key={index}
+  className="p-5 bg-white rounded-lg shadow-md h-fit lg:p-8 serviceImage"
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5, delay: index * 0.2 }}
+>
+  <img src={service.src} alt={service.title} className="w-10 mx-auto lg:w-16" />
+  <motion.h1
+    className="text-center text-[12px] font-bold mt-1 lg:text-[18px] lg:mt-4"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 0.5, delay: 0.4 }}
+  >
+    {service.title}
+  </motion.h1>
+  <motion.p
+    className="text-[10px] font-bold text-center mt-3 lg:text-[14px] lg:mt-6"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 0.5, delay: 0.6 }}
+  >
+    {service.description}
+  </motion.p>
+</motion.div>; */
+}
