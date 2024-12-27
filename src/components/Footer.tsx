@@ -1,5 +1,6 @@
 import { BriefcaseBusiness, MapPinned, Phone } from "lucide-react";
-import {  FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
+import instaLogo from "../../assets/instagram.png"
 import { motion } from "framer-motion"; // Importing Framer Motion for animations
 
 const Footer = () => {
@@ -54,11 +55,7 @@ const Footer = () => {
         transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
       >
         <a href="https://www.instagram.com/tash.tib/" target="blank">
-          <img
-            src="assets\instagram.png"
-            alt="insta-icon"
-            className="h-[26px]"
-          />
+          <img src={instaLogo} alt="insta-icon" className="h-[26px]" />
         </a>
 
         <a

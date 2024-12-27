@@ -5,6 +5,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { MdWorkHistory } from "react-icons/md";
 import imgLogo from "../../../assets/cropped_image_processed_processed.png";
 import { motion } from "framer-motion"; // Import motion
+import instaLogo from "../../../assets/instagram.png"
 import "./navStyle.css";
 
 const Nav = () => {
@@ -105,7 +106,7 @@ const Nav = () => {
         {/* Mobile Menu Button */}
         <button
           type="button"
-          className="inline-flex items-center justify-center w-10 h-10 p-1 text-sm md:hidden dark:text-white"
+          className="inline-flex items-center justify-center w-10 h-full my-auto p-1 text-sm md:hidden dark:text-white"
           aria-controls="navbar-default"
           aria-expanded={isMenuOpen}
           onClick={toggleMenu}
@@ -196,13 +197,13 @@ const Nav = () => {
             rel="noopener noreferrer"
           >
             <img
-              src="assets\instagram.png"
+              src={instaLogo}
               alt="insta-icon"
-              className="h-[20px]"
+              className="h-[29px] "
             />
           </a>
           <a href="https://wa.me" target="_blank" rel="noopener noreferrer">
-            <FaWhatsapp className="text-[#25D366]" />
+            <FaWhatsapp className="text-[#25D366] h-[22px] w-10" />
           </a>
         </motion.div>
       </div>
