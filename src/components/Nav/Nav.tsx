@@ -185,7 +185,7 @@ const Nav = () => {
 
         {/* Social Media Icons */}
         <motion.div
-          className="flex justify-around items-center w-32 mr-3 max-md:my-3"
+          className="flex justify-around items-center w-20 mr-3 max-md:my-3"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.8 }}

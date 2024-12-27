@@ -4,7 +4,7 @@ import experienceImg2 from "../../assets/finishing_works_in_house_for_company_we
 
 const ExperienceSection = () => {
   return (
-    <section className="container max-w-[950px] p-5 h-fit mx-auto lg:max-w-[1200px] lg:p-10 -mt-24 max-md:-mt-48 max-sm:-mt-[250px]">
+    <section className="container max-w-[950px] p-5 h-fit mx-auto lg:max-w-[1200px] lg:p-10 -mt-24 max-md:-mt-48 max-sm:-mt-[250px] max-xs1:-mt-[350px]">
       <div className="grid grid-cols-2 grid-rows-1 max-md:grid-cols-1 max-md:grid-rows-2">
         {/* Images Div */}
         <div className="relative flex flex-col items-center mr-7 max-md:order-0 lg:mr-10">
