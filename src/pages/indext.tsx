@@ -20,7 +20,10 @@ const Home = () => {
       <br />
       <br />
       <br />
+      <br />
       <OurServicesSection />
+      <br />
+      <br />
       <br />
       <br />
       <Location />

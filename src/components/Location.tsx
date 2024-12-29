@@ -43,8 +43,8 @@ const Location = () => {
   };
 
   return (
-    <section className="grid gap-5 grid-cols-2 w-full mt-10 max-md:grid-cols-1">
-      <div className="mx-4">
+    <section className="grid w-full grid-cols-2 gap-10 mt-10 max-md:grid-cols-1">
+      <div className="px-10 mx-4">
         <div className="mb-7">
           <motion.h1
             className="text-3xl font-bold"
@@ -55,7 +55,7 @@ const Location = () => {
             تواصل معنا
           </motion.h1>
           <motion.p
-            className="text-xs text-gray-500 mt-2"
+            className="mt-2 text-xs text-gray-500"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -164,7 +164,7 @@ const Location = () => {
       </div>
 
       <motion.div
-        className="w-full"
+        className="w-full px-5"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}

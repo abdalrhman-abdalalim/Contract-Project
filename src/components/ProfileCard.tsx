@@ -69,7 +69,7 @@ export default function Slider() {
           <img
             src={img}
             alt="Slide Image"
-            className="slider-img w-full h-[460px] max-md:h-[360px] rounded-lg max-xs1:h-[270px] max-sm:h-[360px] "
+            className="slider-img w-full h-[360px] max-md:h-[360px] rounded-lg max-xs1:h-[270px] max-xs2:h-[270px] max-sm:h-[300px]"
           />
         </div>
       </li>

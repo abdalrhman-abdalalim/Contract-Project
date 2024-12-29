@@ -43,7 +43,7 @@ const OurServicesSection = () => {
   ];
 
   return (
-    <section className="-mt-14">
+    <section className="px-7 -mt-14">
       <div className="text-center">
         <motion.h1
           className="text-xl font-bold lg:text-3xl"
@@ -76,11 +76,11 @@ const OurServicesSection = () => {
           />
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-4 max-md:grid-cols-3 max-sm:grid-cols-1 lg:gap-8 mt-5">
+      <div className="grid grid-cols-3 gap-4 mt-5 max-md:grid-cols-3 max-sm:grid-cols-1 lg:gap-8">
         {services.map((service, index) => (
           <motion.div
             key={index}
-            className="ag-offer_item p-5 rounded-lg shadow-md h-fit lg:p-8"
+            className="p-5 rounded-lg shadow-md ag-offer_item h-fit lg:p-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}

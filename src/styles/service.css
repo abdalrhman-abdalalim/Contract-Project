@@ -32,7 +32,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #C0A001;
+  background-color: rgba(192, 160, 1, 0.7);
   transform: scale(0);
   opacity: 0;
   transition: transform 0.4s ease, opacity 0.4s ease;

@@ -49,6 +49,7 @@ const Slider = () => {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.5 }}
+        className="px-0 sm:px-9"
       >
         <ProfileCard />
       </motion.div>
